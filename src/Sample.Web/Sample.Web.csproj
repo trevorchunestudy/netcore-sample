@@ -12,8 +12,17 @@
     <PackageReference Include="fluentvalidation.aspnetcore" Version="8.0.0" />
     <PackageReference Include="hangfire" Version="1.6.20" />
     <PackageReference Include="mediatr" Version="5.1.0" />
+    <PackageReference Include="mediatr.extensions.microsoft.dependencyinjection" Version="5.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="newtonsoft.json" Version="11.0.2" />
+    <PackageReference Include="serilog.aspnetcore" Version="2.1.1" />
+    <PackageReference Include="serilog.settings.configuration" Version="2.6.1" />
+    <PackageReference Include="serilog.sinks.azuretablestorage" Version="4.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Sample.Core\Sample.Core.csproj" />
+    <ProjectReference Include="..\Sample.Data\Sample.Data.csproj" />
   </ItemGroup>
 
 </Project>

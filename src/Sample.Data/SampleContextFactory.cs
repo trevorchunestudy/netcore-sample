@@ -9,7 +9,7 @@ namespace Sample.Data
         public SampleContext CreateDbContext(string[] args)
         {
             var optionsBuilder = new DbContextOptionsBuilder<SampleContext>();
-            optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=Sample;Integrated Security=True");
+            optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=Sample-Test;Integrated Security=True");
             return new SampleContext(optionsBuilder.Options);
         }
     }
