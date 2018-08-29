@@ -7,7 +7,9 @@ namespace Sample.Web.Features.Owners
     {
         public OwnerValidator()
         {
-            RuleFor(m => m.Name).NotEmpty().WithMessage(REQUIRED);
+            RuleFor(m => m.Name)
+                .Length(1, 100)
+                .NotEmpty().WithMessage(REQUIRED);
             
 
             //Add more rules heres

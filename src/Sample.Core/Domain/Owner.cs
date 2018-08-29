@@ -1,5 +1,4 @@
 ﻿using Sample.Core.Domain.Automotive;
-using Sample.Core.ValueObjects;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
@@ -15,6 +14,7 @@ namespace Sample.Core.Domain
             Name = name;
         }
 
+        [Required]
         [MaxLength(100)]
         public string Name { get; private set; }
 
