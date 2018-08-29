@@ -9,7 +9,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="fluentvalidation.aspnetcore" Version="8.0.0" />
+    <PackageReference Include="hangfire" Version="1.6.20" />
+    <PackageReference Include="mediatr" Version="5.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="newtonsoft.json" Version="11.0.2" />
   </ItemGroup>
 
 </Project>
