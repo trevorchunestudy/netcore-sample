@@ -11,4 +11,8 @@
     <PackageReference Include="microsoft.entityframeworkcore.sqlserver" Version="2.1.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Sample.Core\Sample.Core.csproj" />
+  </ItemGroup>
+
 </Project>
