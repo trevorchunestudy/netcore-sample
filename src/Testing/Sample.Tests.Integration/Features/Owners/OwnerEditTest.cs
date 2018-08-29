@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace Sample.Tests.Integration.Features.Admin.Owners
+namespace Sample.Tests.Integration.Features.Owners
 {
     using Sample.Core.Domain;
     using Sample.Web.Features.Owners;

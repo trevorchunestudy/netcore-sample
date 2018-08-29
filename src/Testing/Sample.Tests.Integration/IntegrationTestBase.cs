@@ -2,6 +2,8 @@
 using System.Threading.Tasks;
 using Xunit;
 
+//This forces each test class to run on the same thread which forces a 'synchronous' type execution keeping the database clean after each test.
+[assembly: CollectionBehavior(CollectionBehavior.CollectionPerAssembly)]
 namespace Sample.Tests.Integration
 {
     public abstract class IntegrationTestBase : IAsyncLifetime
