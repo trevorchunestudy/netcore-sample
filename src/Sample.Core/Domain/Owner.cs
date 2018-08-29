@@ -39,6 +39,11 @@ namespace Sample.Core.Domain
             Geometry = new Geometry(lat, lng);
         }
 
+        public void Update(string name)
+        {
+            Name = name;
+        }
+
         //TODO: make read only
         public IEnumerable<Vehicle> Vehicles { get; set; }
     }

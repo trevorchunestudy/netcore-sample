@@ -146,5 +146,11 @@ namespace Sample.Core.Domain.Automotive
             return new Vehicle(ownerId, automobile, title, description, mileage, url, imageUrl, imageTag, cond, price,
                 address, exteriorColor, salePrice, sov, geometry);
         }
+
+        public void Update(string title)
+        {
+            //add additional arguments for allowed updated properties
+            Title = title;
+        }
     }
 }
