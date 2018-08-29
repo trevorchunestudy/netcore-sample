@@ -9,7 +9,6 @@ namespace Sample.Data.Mappings
         public override void Map(EntityTypeBuilder<Owner> builder)
         {
             builder.ToTable("Owner");
-            builder.OwnsOne(x => x.Geometry);
         }
     }
 }
