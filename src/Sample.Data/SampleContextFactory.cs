@@ -3,14 +3,14 @@ using Microsoft.EntityFrameworkCore.Design;
 
 namespace Sample.Data
 {
-    public class SampleContextFactory : IDesignTimeDbContextFactory<SampleContext>
-    {
-        //this is for EF Core Command line (localdb) work..
-        public SampleContext CreateDbContext(string[] args)
-        {
-            var optionsBuilder = new DbContextOptionsBuilder<SampleContext>();
-            optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=Sample;Integrated Security=True");
-            return new SampleContext(optionsBuilder.Options);
-        }
-    }
+	public class SampleContextFactory : IDesignTimeDbContextFactory<SampleContext>
+	{
+		//this is for EF Core Command line (localdb) work..
+		public SampleContext CreateDbContext(string[] args)
+		{
+			var optionsBuilder = new DbContextOptionsBuilder<SampleContext>();
+			optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=sample;Integrated Security=True");
+			return new SampleContext(optionsBuilder.Options);
+		}
+	}
 }

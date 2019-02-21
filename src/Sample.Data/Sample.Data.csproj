@@ -1,19 +1,19 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>netcoreapp2.2</TargetFramework>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="microsoft.entityframeworkcore" Version="2.1.2" />
-    <PackageReference Include="microsoft.entityframeworkcore.design" Version="2.1.2" />
-    <PackageReference Include="microsoft.entityframeworkcore.relational" Version="2.1.2" />
-    <PackageReference Include="microsoft.entityframeworkcore.sqlserver" Version="2.1.2" />
-    <PackageReference Include="newtonsoft.json" Version="11.0.2" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="microsoft.entityframeworkcore" Version="2.2.2" />
+		<PackageReference Include="microsoft.entityframeworkcore.design" Version="2.2.2" />
+		<PackageReference Include="microsoft.entityframeworkcore.relational" Version="2.2.2" />
+		<PackageReference Include="microsoft.entityframeworkcore.sqlserver" Version="2.2.2" />
+		<PackageReference Include="newtonsoft.json" Version="12.0.1" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Sample.Core\Sample.Core.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Sample.Core\Sample.Core.csproj" />
+	</ItemGroup>
 
 </Project>
