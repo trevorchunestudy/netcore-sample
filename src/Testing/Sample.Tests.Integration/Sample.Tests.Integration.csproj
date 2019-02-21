@@ -22,29 +22,20 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<None Include="appsettings.json">
-			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</None>
-	</ItemGroup>
-	<ItemGroup>
-		<None Include="appsettings.*.json">
-			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</None>
-	</ItemGroup>
-	<ItemGroup>
-		<None Remove="appsettings.Development.json" />
-	</ItemGroup>
-	<ItemGroup>
-		<Content Include="appsettings.Development.json">
-			<CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</Content>
-	</ItemGroup>
-
-
-	<ItemGroup>
 		<ProjectReference Include="..\..\Sample.Core\Sample.Core.csproj" />
 		<ProjectReference Include="..\..\Sample.Data\Sample.Data.csproj" />
 		<ProjectReference Include="..\..\Sample.Web\Sample.Web.csproj" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(Configuration)' == 'Debug'">
+		<None Update="appsettings.Development.json">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="appsettings.json">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
 	</ItemGroup>
 </Project>
