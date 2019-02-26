@@ -1,8 +1,8 @@
 [CmdletBinding()]
-param([string]$resourceGroupName, [string]$sqlServerName,  [string]$databaseName)
+param([string]$resourceGroupName, [string]$sqlServerName, [string]$databaseName)
 
-Write-Verbose "Deleting database '$databaseName' on SQL Server '$sqlServerName' in Resource Group '$resourceGroupName'."
+Write-Host "Deleting database '$databaseName' on SQL Server '$sqlServerName' in Resource Group '$resourceGroupName'."
 Remove-AzureRmSqlDatabase -ResourceGroupName $resourceGroupName `
- -ServerName $sqlServerName -DatabaseName $databaseName -erroraction 'silentlycontinue'
+    -ServerName $sqlServerName -DatabaseName $databaseName -erroraction 'silentlycontinue'
 
-Write-Verbose "'$databaseName' database deleted."
+Write-Host "'$databaseName' database deleted."
