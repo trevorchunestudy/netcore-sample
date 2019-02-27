@@ -27,7 +27,7 @@ namespace Sample.Web
                 .AddEnvironmentVariables();
             Configuration = builder.Build();
 
-            Console.WriteLine($"Current environment is: {env.EnvironmentName ?? "Default"}");
+            Console.Out.WriteLine($"Current environment is: {env.EnvironmentName ?? "Default"}");
             AppSettings.SetEnviornmentalSettings(Configuration);
         }
 
@@ -36,7 +36,7 @@ namespace Sample.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSerilogServices(Configuration);
+            //services.AddSerilogServices(Configuration);
             services.AddCors();
             services.AddMvc(opt =>
             {
@@ -55,7 +55,12 @@ namespace Sample.Web
 
             services.AddScoped<ApiExceptionFilter>();
             services.AddMediatR(typeof(Startup));
-            services.AddDbContext<SampleContext>(opt => { opt.UseSqlServer(Configuration.GetConnectionString(AppSettings.ConnectionStringName)); });
+            services.AddDbContext<SampleContext>(opt =>
+            {
+                opt.UseSqlServer(
+                    Configuration.GetConnectionString(AppSettings.ConnectionStringName),
+                    x => x.MigrationsAssembly("Sample.Data"));
+            });
 
             //add mediatr support to separate assemblies
             //services.AddMediatR(typeof().GetTypeInfo().Assembly);
