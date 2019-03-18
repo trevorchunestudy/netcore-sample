@@ -44,8 +44,8 @@ else
 }
 
 # Set WebApp connection string #
-Write-Verbose "Setting connection string."
-$connectionStrings = @{Default = @{Type = "SqlServer"; Value = $dbConnectionString}};
-Set-AzureRmWebApp -ResourceGroupName $resourceGroupName -Name $appName `
- -ConnectionStrings $connectionStrings
+#Write-Verbose "Setting connection string."
+#$connectionStrings = @{Default = @{Type = "SqlServer"; Value = $dbConnectionString}};
+Set-AzureRmWebApp -ResourceGroupName $resourceGroupName -Name $appName
+# `-ConnectionStrings $connectionStrings
 Write-Verbose "WebApp configuration completed."
