@@ -1,3 +1,5 @@
+[![Build Status](https://dev.azure.com/trevorchunestudy/sample/_apis/build/status/trevorc-sample%20-%20CI?branchName=master)](https://dev.azure.com/trevorchunestudy/sample/_build/latest?definitionId=1&branchName=master)
+
 # netcore-sample
 A sample .net core project
 
@@ -9,4 +11,3 @@ Uses CQRS pattern.
 3. Add appsettings.Development.json to 'Sample.Tests.Integration' include connection string to 'MyDb-Test'.
 4. Run `dotnet ef database update` against 'Sample.Web'.
 5. Comment/Uncomment 'MyDb/MyDb-Test' and run same command of `dotnet ef database update` for the testing db against 'Sample.Web'.
-
