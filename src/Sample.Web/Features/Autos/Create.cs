@@ -3,6 +3,7 @@ using MediatR;
 using Sample.Core.Domain.Automotive;
 using Sample.Core.ValueObjects.Vehicles;
 using Sample.Data;
+using Sample.Data.Extensions;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -33,6 +34,10 @@ namespace Sample.Web.Features.Autos
 
             public async Task<long> Handle(Command command, CancellationToken cancellationToken)
             {
+                var owner = await _db.Owners.FirstActiveAsync(x => x.Id == command.OwnerId).ConfigureAwait(false);
+                if (owner == null)
+                    return 0;
+
                 var auto = Automobile.Create(command.VehicleId, command.Make, command.Model, command.Year, command.Transmission, command.FuelType,
                             command.BodyStyle, command.DriveTrain, command.Vin);
 

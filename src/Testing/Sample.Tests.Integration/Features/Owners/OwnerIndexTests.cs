@@ -37,7 +37,7 @@
         }
 
         [Fact]
-        public async Task Should_return_a_paged_list_of_owners_sorted_ascending()
+        public async Task Should_return_a_paged_list_of_owners_sorted_ascending_by_name()
         {
             //Arrange
             var query = new Index.Query { Order = "-name" };
@@ -53,7 +53,7 @@
         }
 
         [Fact]
-        public async Task Should_return_a_paged_list_of_owners_sorted_descending()
+        public async Task Should_return_a_paged_list_of_owners_sorted_descending_by_name()
         {
             //Arrange
             var query = new Index.Query { Order = "name" };

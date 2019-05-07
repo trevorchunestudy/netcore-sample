@@ -6,9 +6,11 @@ namespace Sample.Data.Mappings
 {
     public class OwnerMap : EntityMappingConfiguration<Owner>
     {
-        public override void Map(EntityTypeBuilder<Owner> builder)
+        public override void Map(EntityTypeBuilder<Owner> b)
         {
-            builder.ToTable("Owner");
+            b.Metadata
+                .FindNavigation(nameof(Owner.Vehicles))
+                .SetPropertyAccessMode(PropertyAccessMode.Field);
         }
     }
 }

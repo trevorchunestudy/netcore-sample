@@ -34,7 +34,7 @@ namespace Sample.Web.Features.Autos
         {
             var createdId = await _mediator.Send(model).ConfigureAwait(false);
             if (createdId == 0)
-                return BadRequest();
+                return Conflict();
 
             return CreatedAtRoute("GetAuto", new { id = createdId }, model);
         }

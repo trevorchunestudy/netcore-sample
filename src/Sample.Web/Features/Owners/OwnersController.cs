@@ -34,7 +34,7 @@ namespace Sample.Web.Features.Owners
         {
             var createdId = await _mediator.Send(model).ConfigureAwait(false);
             if (createdId == 0)
-                return BadRequest();
+                return Conflict();
 
             return CreatedAtRoute("GetOwner", new { id = createdId }, model);
         }
